@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="templates/template_page.xhtml">
+
+    <!-- Header -->
+    <ui:define name="title">Projects Page</ui:define>
+
+    <!-- Content -->
+    <ui:define name="content">
+        <h:form id="form">
+            <p:dataTable id="table" value="#{tasksDashboardBeans.tasksOfCurrentProject}" var="task" scrollable="true">
+                <p:column headerText="Task Title: ">#{task.taskTitle}</p:column>
+                <p:column headerText="Task Description: ">#{task.taskDescription}</p:column>
+                <p:column headerText="Task Status: ">#{task.taskStatus}</p:column>
+                <p:column headerText="Assigned Developers: ">#{task.employee}</p:column>
+            </p:dataTable>
+
+            <p:button value="Create Task"
+                      outcome="create_task.xhtml"
+                      icon="fa fa-plus">
+            <f:param name="projectId" value="#{project.id}"/>
+            </p:button>
+
+        </h:form>
+    </ui:define>
+
+</ui:composition>
+
+
+</html>

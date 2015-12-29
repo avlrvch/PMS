@@ -1,0 +1,58 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightsteelblue;
+
+}
+.ui-widget,.ui-widget .ui-widget {
+    font-size: 90% !important;
+}
+
+.centered {
+    text-align: center;
+}
+.header,.footer {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-image: url("https://lh3.googleusercontent.com/-8oZpXu74Ss4/VQmfxkZvL2I/AAAAAAABeS4/iQE9uEcoHzE/w2048-h1365/low-poly-texture-2.png");
+    text-align: center;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    position: relative;
+    top: 100px;
+    padding: 10px;
+}
+
+.header h1, .footer h1 {
+    position: relative;
+    top: 50%;
+    margin-top: -10px;
+    color: gray ;
+}
+
+.create-user-btn {
+    margin-top: 20px;
+}
+
+.project_form {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.project_form input[type="text"] {
+    width: 100%;
+    display: block;
+    margin: 0 0 20px 0;
+}
+
